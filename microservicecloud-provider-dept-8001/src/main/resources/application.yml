@@ -2,6 +2,7 @@ server:
   port: 8001
 
 
+
 spring:
   #  配置微服务的名字
   application:
@@ -26,5 +27,22 @@ mybatis:
   # 指定sql映射文件位置
   mapper-locations: classpath:mybatis/mapper/**/*.xml
   type-aliases-package: com.wfy.springcloud.entities
+
+
+# 注册到eureka的服务器上
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+  instance:
+    instance-id: microserviceloud-dept8001
+#    显示ip地址
+    prefer-ip-address: true
+
+info:
+  app.name: atguigu-microservicecloud
+  company.name: www.wfy.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
 
 

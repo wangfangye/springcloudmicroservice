@@ -22,7 +22,7 @@ public class DeptController
 	}
 
 	@PostMapping(value = "/dept/add2")
-	public boolean add2(Dept dept) {
+	public boolean add2(@RequestBody Dept dept) {
 		System.out.println(dept);
 		return service.add(dept);
 	}

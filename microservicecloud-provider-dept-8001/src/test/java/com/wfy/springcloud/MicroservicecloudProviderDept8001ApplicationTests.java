@@ -2,7 +2,7 @@ package com.wfy.springcloud;
 
 import com.wfy.springcloud.entities.Dept;
 import com.wfy.springcloud.service.DeptService;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 

@@ -3,10 +3,12 @@ package com.wfy.springcloud;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-// Eureka的client端口
+// Eureka的client端口，需要从
 @EnableEurekaClient
+@EnableDiscoveryClient
 @MapperScan(value = "com.wfy.springcloud.dao")
 @SpringBootApplication
 public class MicroservicecloudProviderDept8001Application {

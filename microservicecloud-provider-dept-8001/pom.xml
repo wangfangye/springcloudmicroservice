@@ -18,6 +18,8 @@
 
     <properties>
         <java.version>14</java.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <project.version>0.0.1-SNAPSHOT</project.version>
     </properties>
 
     <dependencies>
@@ -34,6 +36,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
 <!--        eureka client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -43,7 +46,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-
+<!--        eureka中有ribbon hystrix-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
@@ -70,7 +77,7 @@
             <artifactId>druid</artifactId>
         </dependency>
 
-        <!--       如果少了这个无法正常运行 -->
+        <!--       druid 如果少了这个无法正常运行 -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -95,6 +102,18 @@
             <artifactId>microservicecloud-api</artifactId>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>

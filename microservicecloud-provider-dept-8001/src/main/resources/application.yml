@@ -6,7 +6,7 @@ server:
 spring:
   #  配置微服务的名字
   application:
-    name: microserviceloud-dept
+    name: microservicecloud-dept
   datasource:
     username: root
     password: 123456
@@ -33,12 +33,14 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+#      defaultZone: http://localhost:7001/eureka #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
   instance:
-    instance-id: microserviceloud-dept8001
+    instance-id: microservicecloud-dept8001
 #    显示ip地址
     prefer-ip-address: true
 
+# 显示点击的信息方便维护
 info:
   app.name: atguigu-microservicecloud
   company.name: www.wfy.com

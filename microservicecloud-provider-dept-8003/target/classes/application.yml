@@ -1,0 +1,50 @@
+server:
+  port: 8003
+
+
+
+spring:
+  #  配置微服务的名字
+  application:
+    name: microservicecloud-dept
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/cloudDB03?useSSL=false
+    #    url: jdbc:mysql://59.110.214.2:3307/mybatis?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#    dbcp2:
+#      min-idle: 5                                           # 数据库连接池的最小维持连接数
+#      initial-size: 5                                       # 初始化连接数
+#      max-total: 5                                          # 最大连接数
+#      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+#
+mybatis:
+  # 指定全局配置文件位置
+  config-location: classpath:mybatis/mybatis-config.xml
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: com.wfy.springcloud.entities
+
+
+# 注册到eureka的服务器上
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:7001/eureka #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/ #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）。
+  instance:
+    instance-id: microservicecloud-dept8003
+#    显示ip地址
+    prefer-ip-address: true
+
+# 显示点击的信息方便维护
+info:
+  app.name: atguigu-microservicecloud
+  company.name: www.wfy.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+

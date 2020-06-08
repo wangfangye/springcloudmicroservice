@@ -7,10 +7,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="microservicecloud-api" />
+        <module name="microservicecloud-provider-dept-8003" />
+        <module name="microservicecloud-provider-dept-8004" />
+        <module name="microservicecloud-eureka-7003" />
+        <module name="microservicecloud-eureka-7002" />
+        <module name="microservicecloud-eureka-7001" />
         <module name="microservicecloud-consumer-dept-80" />
         <module name="microservicecloud-provider-dept-8001" />
-        <module name="microservicecloud-eureka-7001" />
+        <module name="microservicecloud-sureka-7002" />
+        <module name="microservicecloud-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,7 +23,13 @@
       <module name="microservicecloud-api" target="1.8" />
       <module name="microservicecloud-consumer-dept-80" target="1.8" />
       <module name="microservicecloud-eureka-7001" target="1.8" />
+      <module name="microservicecloud-eureka-7002" target="1.8" />
+      <module name="microservicecloud-eureka-7003" target="1.8" />
       <module name="microservicecloud-provider-dept-8001" target="1.8" />
+      <module name="microservicecloud-provider-dept-8002" target="14" />
+      <module name="microservicecloud-provider-dept-8003" target="1.8" />
+      <module name="microservicecloud-provider-dept-8004" target="1.8" />
+      <module name="microservicecloud-sureka-7002" target="14" />
       <module name="springcloudmicroservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -28,7 +39,13 @@
       <module name="microservicecloud-api" options="-parameters" />
       <module name="microservicecloud-consumer-dept-80" options="-parameters" />
       <module name="microservicecloud-eureka-7001" options="-parameters" />
+      <module name="microservicecloud-eureka-7002" options="-parameters" />
+      <module name="microservicecloud-eureka-7003" options="-parameters" />
       <module name="microservicecloud-provider-dept-8001" options="-parameters" />
+      <module name="microservicecloud-provider-dept-8002" options="-parameters" />
+      <module name="microservicecloud-provider-dept-8003" options="-parameters" />
+      <module name="microservicecloud-provider-dept-8004" options="-parameters" />
+      <module name="microservicecloud-sureka-7002" options="-parameters" />
       <module name="springcloudmicroservice" options="-parameters" />
     </option>
   </component>

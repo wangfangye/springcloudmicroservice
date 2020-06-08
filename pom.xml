@@ -20,8 +20,13 @@
 
     <modules>
         <module>microservicecloud-api</module>
+        <module>microservicecloud-consumer-dept-80</module>
         <module>microservicecloud-provider-dept-8001</module>
+        <module>microservicecloud-provider-dept-8004</module>
+        <module>microservicecloud-provider-dept-8003</module>
         <module>microservicecloud-eureka-7001</module>
+        <module>microservicecloud-eureka-7002</module>
+        <module>microservicecloud-eureka-7003</module>
     </modules>
 
     <description>Demo project for Spring Boot</description>
@@ -39,6 +44,7 @@
         <durid.version>1.1.8</durid.version>
         <log4j-core.version>2.12.1</log4j-core.version>
         <mybatis-spring-boot-starter.version>2.1.2</mybatis-spring-boot-starter.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
 
 <!--    使用dependencyManagement可以对版本进行控制，当子项目写的时候才导入，否则不导入-->
@@ -69,7 +75,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.RELEASE</version>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

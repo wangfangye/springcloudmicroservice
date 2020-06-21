@@ -15,3 +15,6 @@ tips:
 注册三个了MICROSERVICECLOUD-DEPT微服务，以及一个CONSUMER-USER的微服务。可以通过使用RestTemplate，通过微服务的名字进行调用。之后有更加简单的方式。
 ![微服务列表](imgs/服务列表.png)
 
+Feign 面向接口的编程, 简化consumer通过服务名称调用接口的方式。通过注解关联微服务和接口，在consumer中调用接口直接实现方法的调用
+Feign
+

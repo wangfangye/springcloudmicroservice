@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 public class ConfigBean { // 注解版的配置， boot=> spring applicationContext.xml
 
 //    Web容器中
+
     @LoadBalanced // 负载均衡 必须访问服务的名称
     @Bean
     public RestTemplate getRestTemplate(){

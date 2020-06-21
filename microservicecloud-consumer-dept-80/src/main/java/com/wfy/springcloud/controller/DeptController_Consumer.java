@@ -20,6 +20,7 @@ public class DeptController_Consumer {
     @RequestMapping(value = "consumer/dept/add3",method = RequestMethod.POST)
     public boolean addtest(Dept dept){
         System.out.println(dept);
+
         return restTemplate.postForObject(REST_URL_PREFIX_NAME+"/dept/add2",dept,Boolean.class);
     }
     @RequestMapping(value = "consumer/dept/get2/{id}",method = RequestMethod.GET)

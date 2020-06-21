@@ -4,6 +4,7 @@
 - provider-dept:8001\8003\8004      
     嫌麻烦的，其实可以修改port之后通过install产生多个jar包，然后命令行运行，也可以产生多个微服务。
 - consumer-dept:80
+- api: 放置service
       
 tips:
 微服务中添加了druid监控，可以输入localhost:80/druid,输入用户名、密码查看。不过这里只是为了测试集成druid，没有具体的业务需求。
